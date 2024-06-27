@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.11.4 on win32)" generated="2024-05-03T21:40:29.618931" rpa="false" schemaversion="5">
+<suite id="s1" name="testDemo2" source="C:\Users\Danielle\Desktop\UDEMY Courses\RobotFramework\RobotFramProject2\testDemo2.robot">
+<test id="s1-t1" name="Login User with correct email and password" line="17">
+<kw name="Launch browser with the shopping page" owner="resource2" type="SETUP">
+<kw name="Create Webdriver" owner="SeleniumLibrary">
+<msg time="2024-05-03T21:40:30.063847" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<arg>Chrome</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="PASS" start="2024-05-03T21:40:30.063847" elapsed="3.893536"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-05-03T21:40:33.961377" level="INFO">Opening url 'https://automationexercise.com/'</msg>
+<arg>${url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-05-03T21:40:33.960373" elapsed="5.114114"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-05-03T21:40:39.267594" level="INFO">Element 'xpath://a[normalize-space()='Home']' is displayed.</msg>
+<arg>${Home_locator}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-03T21:40:39.075799" elapsed="0.191795"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2024-05-03T21:40:39.268593" level="INFO">Verifying element 'xpath://a[normalize-space()='Home']' contains exact text 'Home'.</msg>
+<arg>${Home_locator}</arg>
+<arg>Home</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2024-05-03T21:40:39.268593" elapsed="0.037465"/>
+</kw>
+<status status="PASS" start="2024-05-03T21:40:30.062835" elapsed="9.243223"/>
+</kw>
+<kw name="Click on 'Signup / Login' button">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-03T21:40:39.308058" level="INFO">Clicking element 'xpath://a[normalize-space()='Signup / Login']'.</msg>
+<arg>${Signup_Login_locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-03T21:40:39.307057" elapsed="2.126350"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-05-03T21:40:41.484378" level="INFO">Element 'xpath://h2[normalize-space()='New User Signup!']' is displayed.</msg>
+<arg>xpath://h2[normalize-space()='New User Signup!']</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-03T21:40:41.433407" elapsed="0.050971"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2024-05-03T21:40:41.485655" level="INFO">Verifying element 'xpath://h2[normalize-space()='New User Signup!']' contains exact text 'New User Signup!'.</msg>
+<arg>xpath://h2[normalize-space()='New User Signup!']</arg>
+<arg>New User Signup!</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2024-05-03T21:40:41.484378" elapsed="0.039778"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-05-03T21:40:41.574623" level="INFO">Element 'xpath://h2[normalize-space()='Login to your account']' is displayed.</msg>
+<arg>xpath://h2[normalize-space()='Login to your account']</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-03T21:40:41.524156" elapsed="0.050467"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2024-05-03T21:40:41.575636" level="INFO">Verifying element 'xpath://h2[normalize-space()='Login to your account']' contains exact text 'Login to your account'.</msg>
+<arg>xpath://h2[normalize-space()='Login to your account']</arg>
+<arg>Login to your account</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2024-05-03T21:40:41.574623" elapsed="0.042112"/>
+</kw>
+<status status="PASS" start="2024-05-03T21:40:39.307057" elapsed="2.311083"/>
+</kw>
+<kw name="Enter/submit correct email address and password">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-03T21:40:41.623393" level="INFO">Typing text 'emilygrant@yahoo.it' into text field 'xpath://input[@data-qa='login-email']'.</msg>
+<arg>xpath://input[@data-qa='login-email']</arg>
+<arg>${valid_email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-03T21:40:41.623393" elapsed="0.198456"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2024-05-03T21:40:41.823193" level="INFO">Typing password into text field 'name:password'.</msg>
+<msg time="2024-05-03T21:40:41.881068" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>name:password</arg>
+<arg>${valid_pwd}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-03T21:40:41.823193" elapsed="0.135966"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-05-03T21:40:41.960187" level="INFO">Clicking button 'xpath://button[normalize-space()='Login']'.</msg>
+<arg>xpath://button[normalize-space()='Login']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-03T21:40:41.959159" elapsed="2.085844"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-05-03T21:40:44.099838" level="INFO">Element 'xpath://li[10]//a[1]' is displayed.</msg>
+<arg>${Success_login_locator}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-03T21:40:44.045003" elapsed="0.054835"/>
+</kw>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2024-05-03T21:40:44.155822" level="INFO">Element 'xpath://li[10]//a[1]' contains text 'Logged in as'.</msg>
+<arg>${Success_login_locator}</arg>
+<arg>Logged in as</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2024-05-03T21:40:44.101171" elapsed="0.054651"/>
+</kw>
+<status status="PASS" start="2024-05-03T21:40:41.622365" elapsed="2.533457"/>
+</kw>
+<kw name="Close Browser session" owner="resource2" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-05-03T21:40:44.157815" elapsed="2.407014"/>
+</kw>
+<status status="PASS" start="2024-05-03T21:40:44.156815" elapsed="2.409109"/>
+</kw>
+<status status="PASS" start="2024-05-03T21:40:30.061387" elapsed="16.506544"/>
+</test>
+<doc>Practice of Automation testing
+To improve my skills</doc>
+<status status="PASS" start="2024-05-03T21:40:29.621247" elapsed="16.950671"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="testDemo2">testDemo2</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
